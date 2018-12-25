@@ -1,0 +1,209 @@
+page-main-cooking {
+    $width-name: min-width;
+    $target-width0: 200px;
+    $target-width1: 360px;
+    $target-width2: 480px;
+    $target-width3: 1080px;
+    $bg : #f1edc4 !important;
+
+    @media screen and ($width-name : $target-width0) {
+        [default-background-height] {
+            height: 100%;
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            .ionic-descript-top {
+                position: absolute;
+                display: table-row;
+                width: 100%;
+                height: 80%;
+           }
+            .ionic-descript-bottom {
+                display: table-row;
+                width: 100%;
+                height: 20%;
+                background-color: $bg;
+           }
+       }
+        ion-row.ion-row-healthy-001 {
+            ion-col {
+                background-color: $bg;
+                //background-color: #82c3b8;
+                padding: 10px !important;
+                //line-height: 22px !important;
+           }
+            span.span-cooking-header {
+                display: block;
+                font-size: 16px;
+                color: theme-colors('mainColors', 'dark');
+                font-weight: bold;
+           }
+            span.span-cooking {
+                font-size: 16px;
+                color: theme-colors('textColors', 'angle-double');
+                font-style: italic;
+           }
+       }
+   }
+    @media screen and ($width-name : $target-width1) {
+        [default-background-height] {
+            height: 100%;
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            .ionic-descript-top {
+                position: absolute;
+                display: table-row;
+                width: 100%;
+                height: 80%;
+           }
+            .ionic-descript-bottom {
+                display: table-row;
+                width: 100%;
+                height: 20%;
+                background-color: $bg;
+           }
+       }
+        ion-row.ion-row-healthy-001 {
+            ion-col {
+                background-color: $bg;
+                //background-color: #ffc125;
+                padding: 10px !important;
+                ///line-height: 26px !important;
+           }
+            span.span-cooking-header {
+                display: block;
+                font-size: 24px;
+                color: theme-colors('mainColors', 'dark');
+                font-weight: bold;
+           }
+            span.span-cooking {
+                font-size: 16px;
+                color: theme-colors('textColors', 'angle-double');
+                font-style: italic;
+           }
+       }
+   }
+    @media screen and ($width-name : $target-width2) {
+        [default-background-height] {
+            height: 100%;
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            .ionic-descript-top {
+                position: absolute;
+                display: table-row;
+                width: 100%;
+                height: 88%;
+           }
+            .ionic-descript-bottom {
+                display: table-row;
+                width: 100%;
+                height: 12%;
+                background-color: $bg;
+           }
+       }
+        ion-row.ion-row-healthy-001 {
+            ion-col {
+                background-color: $bg;
+                //background-color: #ffa387;
+                padding: 10px !important;
+                //line-height: 26px !important;
+           }
+            span.span-cooking-header {
+                display: block;
+                font-size: 26px;
+                color: theme-colors('mainColors', 'dark');
+                font-weight: bold;
+           }
+            span.span-cooking {
+                font-size: 16px;
+                color: theme-colors('textColors', 'angle-double');
+                font-style: italic;
+           }
+       }
+   }
+   /* ion-header */
+    .toolbar {
+        .toolbar-background {
+            background-color: transparent;
+       }
+       /* ion-title */
+        .toolbar-title {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: theme-colors('textColors', 'dark');
+       }
+   }
+   /* ion-button */
+    [ion-button] {
+        color: theme-colors('textColors', 'dark') !important;
+        font-size: icon-size('icon-menu') !important;
+   }
+    hr.line1 {
+        border: 0;
+        height: 30px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+   }
+    hr.line2 {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+   }
+    button.button-cooking {
+        width: 100%;
+        text-align: left;
+        background: transparent;
+        color: #FFD001 !important;
+        font-size: font-size-text('h4') !important;
+        padding: 25px 25px !important;
+        //font-weight: bold !important;
+        border: 1px solid #FFD001;
+        border-radius: 10px !important;
+        text-transform: capitalize;
+        ion-icon {
+            i.icon-facebook {
+                color: #FFD001;
+                padding-right: 5px;
+                font-size: font-size-text('h1') !important;
+           }
+       }
+   }
+    button.button-shopping {
+        width: 100%;
+        text-align: left;
+        background: transparent;
+        color: #dabb01;
+        font-size: font-size-text('h2') !important;
+        font-weight: bold !important;
+        border: 1px solid #dabb01;
+        border-radius: $border-radius;
+   }
+    img.img-bt {
+        display: block;
+        height: 28px !important;
+        margin: 0 !important;
+        padding: 0px 10px 0px 0px !important;
+   }
+    div.icon-position {
+        position: absolute !important;
+        right: 10px !important;
+        bottom: 0px !important;
+        z-index: 99;
+   }
+    i.icon-like {
+        color: #f92c32;
+        font-size: 28px !important;
+   }
+    i.icon-unlike {
+        color: #b7b7b7;
+        font-size: 28px !important;
+   }
+    img.img-001 {
+        display: block;
+        height: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+   }
+}

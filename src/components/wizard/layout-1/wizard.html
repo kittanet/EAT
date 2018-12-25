@@ -1,0 +1,57 @@
+<!--Theme Wizard Simple + icon-->
+
+<!--Content -->
+
+<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null" autoplay="5000" loop="true"
+    speed="500">
+    <ion-slide *ngFor="let item of data.items;"
+              [ngStyle]="{'background-image': 'url(' + item.backgroundImage + ')', 'background-size': '100% 100%' }"
+              class="bgScreen"
+              (click)="onClick(item)">
+       <!-- <ion-icon icon-large>
+            <i class="icon {{item.iconSlider}}"></i>
+        </ion-icon>
+        <h1 wizard-title>{{item.title}}</h1>
+        <p wizard-body-text>{{item.description}}</p>
+        <img src="{{item.imgs}}"> -->
+
+        <div class="divTime {{item.showCountDown}}">
+            <ion-grid>
+                <ion-row text-center class="fNumber">
+                    <ion-col>22
+                        <!--{{days}}-->
+                    </ion-col>
+                    <ion-col> 22
+                        <!--{{hrs}}-->
+                    </ion-col>
+                    <ion-col> 22
+                        <!--{{mnts}}-->
+                    </ion-col>
+                    <ion-col> 22
+                        <!--{{current}}-->
+                    </ion-col>
+                </ion-row>
+                <ion-row text-center class="fDetail" no-margin no-padding>
+                    <ion-col> Days </ion-col>
+                    <ion-col> Hours </ion-col>
+                    <ion-col> Mins </ion-col>
+                    <ion-col> Secs </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+    </ion-slide>
+</ion-slides>
+
+<!--Button section-->
+<div *ngIf="data != null">
+    <button ion-button button-clear clear left (click)="changeSlide(-1)" *ngIf="prev">
+        {{data.btnPrev}}
+    </button>
+    <button ion-button button-clear clear right (click)="changeSlide(1)" *ngIf="next">
+        {{data.btnNext}}
+    </button>
+    <button ion-button button-clear clear right (click)="onEvent('onFinish')" *ngIf="finish">
+        {{data.btnFinish}}
+    </button>
+</div>

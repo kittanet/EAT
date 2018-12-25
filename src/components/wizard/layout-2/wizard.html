@@ -1,0 +1,31 @@
+<ion-header no-border transparent>
+    <ion-navbar>
+        <ion-buttons right>
+            <button ion-button id="btnMenu">
+                <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="frist" id="click1">
+                <div>Collections</div>
+            </div>
+            <div class="frist" id="click2" (click)="nextPage()">
+                <div>My Favorite</div>
+            </div>
+            <div class="frist" id="click3">
+                <div>My Healthy Choice</div>
+            </div>
+            <div class="frist" id="click4">
+                <div>Shopping List</div>
+            </div>
+            <div class="last" id="click5">
+                <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="assets/images/th.png"><span>Thai</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-header>

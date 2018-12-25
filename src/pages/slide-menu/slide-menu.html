@@ -1,0 +1,115 @@
+<ion-header no-border transparent>
+  <ion-navbar>
+    <ion-buttons right (click)="openMyModal()">
+      <button ion-button id="btnMenu">
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-grid no-padding no-margin>
+    <ion-row>
+      <ion-col col-12 no-padding no-margin>
+        <img no-padding no-margin class="img-logo" src="assets/images/logo.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content class="ion-slide-menu-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}">
+  <div default-background>
+    <div class="ionic-descript" text-center>
+      <ion-slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide *ngFor="let item of conllections">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-1 *ngIf="item.index != 0">
+                <i id="i-left" class="fa fa-angle-double-left" aria-hidden="true"></i>
+              </ion-col>
+              <ion-col col-10>
+                &nbsp;
+              </ion-col>
+              <ion-col col-1 *ngIf="item.index != conllections.length">
+                <i id="i-right" class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <div id="myCollection" class="containerx">
+    <div class="mob">
+      <div class="hamburger-btn">
+
+        <div class="ionic-descript1" text-center>
+          <div class="div-top">
+            <div default-background>
+              <div class="ionic-descript" text-center>
+                <i id="i2" class="fa fa-angle-double-up" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div id="div-middle" default-background>
+            <div class="ionic-descript" text-center>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-12 style="line-height:20px;">
+                    <span class="txt-menu-top" (click)="goMainCookingPage()">VIEW</span> <br><span class="txt-menu-bottom">{{detail_menu_length}}
+                      MENUS</span>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+          <div id="div-bottom" class="div-bottom">
+            <div default-background>
+              <div class="ionic-descript" text-center>
+                <i id="i3" class="fa fa-angle-double-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ionic-descript2">
+          <div class="y-tittle">
+            <span class="title-h txt20b">{{title}}</span><br>
+            <span class="title-h txt14i">{{index}} of {{conllections_length}} collections</span>
+          </div>
+          <div id="y-scroll" class="y-scroll">
+            <div class="y-content">
+              <span *ngFor="let item of detail_menu" [ngClass]="item.check ? 'submenu span-content-active': 'span-content'"
+                (click)="changeImg(item.img, item)">{{item.menu_name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-footer>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="frist" id="click1">
+      <div>Collections</div>
+    </div>
+    <div class="frist" (click)="goMyFavoritePage()">
+      <div>My Favorite</div>
+    </div>
+    <div class="frist" (click)="goMyHealthyChoicePage()">
+      <div>My Healthy Choice</div>
+    </div>
+    <div class="frist" (click)="goShoppingListPage()">
+      <div>Shopping List</div>
+    </div>
+    <div class="last" id="click5">
+      <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="assets/images/th.png"><span>Thai</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="divPoint" class="modal" (click)="closeDivPoint()">
+ <img class="img-point blink-image" src="assets/images/point.png">
+</div>
+

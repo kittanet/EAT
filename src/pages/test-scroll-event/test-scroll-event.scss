@@ -1,0 +1,17 @@
+page-test-scroll-event {
+    div.div-down {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #ccb4ff;
+    }
+
+    div.div-up {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #ffb3f2;
+    }
+}

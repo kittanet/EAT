@@ -1,0 +1,102 @@
+/* The Modal (background) */
+$box-shadow-z1: 0 2px 10px rgba(247, 241, 241, 0.3);
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 200px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.5); 
+  box-shadow: $box-shadow-z1 !important;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content-choice {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #fefefe;
+  width: 80%;
+  box-shadow: $box-shadow-z1 !important;
+}
+
+
+div.frist {
+  width: 100%;
+  height: 60px;
+  display: table;
+  font-size: font-size-text('h3') !important;
+  border-bottom: 0.7px solid theme-colors('mainColors', 'border-menu') !important;
+  div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        width: 30px;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      span {
+        font-size: font-size-text('h3') !important;
+        padding-left: 5px !important;
+      }
+  }   
+}
+
+div.frist-select {
+  width: 100%;
+  height: 60px;
+  display: table;
+  font-size: font-size-text('h3') !important;
+  border-bottom: 0.7px solid theme-colors('mainColors', 'border-menu') !important;
+  background-color: theme-colors('mainColors', 'secondary-first') !important;
+  div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        width: 30px;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      span {
+        font-size: font-size-text('h3') !important;
+        padding-left: 5px !important;
+      }
+  }   
+}
+
+div.last {
+  width: 100%;
+  height: 60px;
+  display: table;
+  font-size: font-size-text('h3') !important;
+  div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        width: 30px;
+        padding: 0 !important;
+        margin: 0 !important;
+        vertical-align: middle;
+      }
+      span {
+        font-size: font-size-text('h3') !important;
+        padding-left: 8px !important;
+      }
+  }   
+}

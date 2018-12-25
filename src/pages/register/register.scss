@@ -1,0 +1,43 @@
+page-register {
+    .ion-slide-menu-bg-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+   }
+    ion-icon {
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        color: #ffffff;
+        padding-right: 5px;
+        font-size: font-size-text('h2') !important;
+   }
+    button.button-fb {
+        width: 100%;
+        background: theme-colors('mainColors', 'facebook-blue') !important;
+        color: theme-colors('blendModes', 'primary') !important;
+        font-size: font-size-text('h3') !important;
+        padding: 30px 25px !important;
+        border: none;
+   }
+    button.button-google {
+        width: 100%;
+        background: theme-colors('mainColors', 'google') !important;
+        color: theme-colors('blendModes', 'primary') !important;
+        font-size: font-size-text('h3') !important;
+        padding: 30px 25px !important;
+        border: none;
+   }
+
+   button.button-twitter {
+        width: 100%;
+        //background: linear-gradient( #5442d6, transparent),linear-gradient(90deg, #b728a8, #f3243e,#fec053);
+        background: theme-colors('mainColors', 'twitter') !important;
+        color: theme-colors('blendModes', 'primary') !important;
+        font-size: font-size-text('h3') !important;
+        padding: 30px 25px !important;
+        border: none;
+    }
+}

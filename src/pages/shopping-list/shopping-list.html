@@ -1,0 +1,79 @@
+<ion-header no-border transparent>
+  <ion-navbar>
+    <ion-buttons right (click)="openMyModal()">
+      <button ion-button id="btnMenu">
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12 no-padding no-margin>
+        <img class="img-logo" src="assets/images/logo.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content class="ion-slide-menu-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 class="white-space">
+        <ion-row>
+          <ion-col col-12>
+            <span class="span-shopping">Chrispy Salmon Skin with Homemade Teriyaki Source</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-10 text-right>
+            <span class="span-cooking-content">1 cup crabmeat, picked free of shells </span>
+            <span class="span-cooking-content">1/3 cup breadcrumb </span>
+          </ion-col>
+          <ion-col col-2 text-right>
+            <ion-icon ios="ios-trash" md="md-trash" class="bin"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="white-space">
+        <ion-row>
+          <ion-col col-12>
+            <span class="span-shopping">Light and Fresh Beff Tartar</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-10 text-right>
+            <span class="span-cooking-content">1 cup crabmeat, picked free of shells </span>
+            <span class="span-cooking-content">1/3 cup breadcrumb </span>
+          </ion-col>
+          <ion-col col-0 text-right>
+            <ion-icon ios="ios-trash" md="md-trash" class="bin"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="frist" id="click1" (click)="goSlideMenuPage()">
+            <div>Collections</div>
+        </div>
+        <div class="frist" (click)="goMyFavoritePage()">
+            <div>My Favorite</div>
+        </div>
+        <div class="frist" (click)="goMyHealthyChoicePage()">
+            <div>My Healthy Choice</div>
+        </div>
+        <div class="frist" (click)="goShoppingListPage()">
+            <div>Shopping List</div>
+        </div>
+        <div class="last" id="click5">
+            <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="assets/images/th.png"><span>Thai</span>
+            </div>
+        </div>
+    </div>
+</div>

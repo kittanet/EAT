@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons right>
+        <button ion-button (click)="goHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons left>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>ข้อมูลสมาชิก</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content class="bg-gradient-gray">
+    <div default-background>
+      <div class="ionic-descript" text-center>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-8 offset-2>
+              <h3>ตั้งค่า PIN</h3>
+              <ion-item no-padding transparent>
+                <ion-label floating>E-mail</ion-label>
+                <ion-input required type="text" [(ngModel)]="username"></ion-input>
+              </ion-item>
+              <ion-item no-padding transparent>
+                <ion-label floating>Password</ion-label>
+                <ion-input required type="password" [(ngModel)]="password"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-8 offset-2>
+              <button ion-button ion-button round button-register (click)="onLogin()" style="width: 100%; font-size: 24px;">ตกลง</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </ion-content>

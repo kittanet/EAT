@@ -1,0 +1,61 @@
+<ion-header no-border transparent>
+  <ion-navbar>
+    <ion-buttons right (click)="openMyModal()">
+      <button ion-button>
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons left>
+      <button ion-button (click)="backPage()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="content-background">
+  <div>
+    <ion-slides (ionSlideDidChange)="slideChanged()">
+      <ion-slide *ngFor="let item of step">
+        <div class="ion-cooking-bg-image" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
+          <img class="img-cooking-opacity0" [src]="item.img" />
+          <ion-grid>
+            <ion-row class="rowCooking">
+              <ion-col col-12 text-left>
+                <span class="span-tittle-orange">{{item.title}}</span>
+                <span style="font-size: 16px; display: block;">{{item.detail}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div text-right style="padding-right:10px !important; padding-top: 10px; padding-bottom: 10px;">
+    <span class="span-tittle" (click)="goChefsTipPage()" *ngIf="video != null">See Tip</span>
+    <!-- <span class="span-tittle" (click)="back()" *ngIf="page > 0">Back</span>
+  <span class="span-tittle" (click)="next()" *ngIf="page < this.res.Step.length-1">Next</span> -->
+  </div>
+</ion-content>
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="frist" id="click1" (click)="goSlideMenuPage()">
+      <div>Collections</div>
+    </div>
+    <div class="frist" (click)="goMyFavoritePage()">
+      <div>My Favorite</div>
+    </div>
+    <div class="frist" (click)="goMyHealthyChoicePage()">
+      <div>My Healthy Choice</div>
+    </div>
+    <div class="frist" (click)="goShoppingListPage()">
+      <div>Shopping List</div>
+    </div>
+    <div class="last" id="click5">
+      <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="assets/images/th.png"><span>Thai</span>
+      </div>
+    </div>
+  </div>
+</div>

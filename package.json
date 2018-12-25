@@ -1,0 +1,120 @@
+{
+    "name": "ncap",
+    "version": "0.0.1",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "lint": "ionic-app-scripts lint",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/animations": "5.2.9",
+        "@angular/common": "5.2.9",
+        "@angular/compiler": "5.2.9",
+        "@angular/compiler-cli": "5.2.9",
+        "@angular/core": "5.2.9",
+        "@angular/forms": "5.2.9",
+        "@angular/http": "5.2.9",
+        "@angular/platform-browser": "5.2.9",
+        "@angular/platform-browser-dynamic": "5.2.9",
+        "@ionic-native/barcode-scanner": "^4.6.0",
+        "@ionic-native/core": "4.5.3",
+        "@ionic-native/facebook": "^4.17.0",
+        "@ionic-native/geolocation": "^4.12.2",
+        "@ionic-native/google-plus": "^4.17.0",
+        "@ionic-native/http": "^4.12.0",
+        "@ionic-native/in-app-browser": "^4.6.0",
+        "@ionic-native/launch-navigator": "^4.12.0",
+        "@ionic-native/splash-screen": "4.5.3",
+        "@ionic-native/status-bar": "4.5.3",
+        "@ionic-native/streaming-media": "^4.15.0",
+        "@ionic-native/themeable-browser": "^4.6.0",
+        "@ionic-native/twitter-connect": "^4.18.0",
+        "@ionic/lab": "^1.0.2",
+        "@ionic/storage": "2.1.3",
+        "@mobiscroll/angular": "https://npm.mobiscroll.com/@mobiscroll/angular-trial/-/angular-trial-4.3.2.tgz",
+        "angular2-jwt": "^0.2.3",
+        "cordova-android": "^6.3.0",
+        "cordova-ios": "4.2.1",
+        "cordova-plugin-actionsheet": "^2.3.3",
+        "cordova-plugin-advanced-http": "^1.11.1",
+        "cordova-plugin-device": "^2.0.2",
+        "cordova-plugin-dialogs": "^2.0.1",
+        "cordova-plugin-facebook4": "1.10.1",
+        "cordova-plugin-file": "^6.0.1",
+        "cordova-plugin-geolocation": "^4.0.1",
+        "cordova-plugin-googleplus": "5.3.2",
+        "cordova-plugin-inappbrowser": "^2.0.2",
+        "cordova-plugin-ionic-keyboard": "^2.1.3",
+        "cordova-plugin-ionic-webview": "^1.2.1",
+        "cordova-plugin-platform-replace": "^1.0.0",
+        "cordova-plugin-splashscreen": "^5.0.2",
+        "cordova-plugin-streaming-media": "^2.2.0",
+        "cordova-plugin-themeablebrowser": "^0.2.17",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "ionic-angular": "3.9.2",
+        "ionic-img-viewer": "^2.9.0",
+        "ionicons": "3.0.0",
+        "jquery": "^3.3.1",
+        "phonegap-plugin-barcodescanner": "^7.1.2",
+        "rxjs": "5.5.7",
+        "sw-toolbox": "3.6.0",
+        "twitter-connect-plugin": "git+https://github.com/chroa/twitter-connect-plugin.git",
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.2.2",
+        "zone.js": "0.8.20"
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "3.2.0",
+        "@types/jquery": "^3.3.2",
+        "typescript": "~2.6.2"
+    },
+    "description": "An Ionic project",
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-ionic-webview": {},
+            "cordova-plugin-ionic-keyboard": {},
+            "cordova-plugin-themeablebrowser": {},
+            "cordova-plugin-facebook4": {
+                "APP_ID": "2116798868583946",
+                "APP_NAME": "Eatmatters"
+            },
+            "cordova-plugin-inappbrowser": {},
+            "phonegap-plugin-barcodescanner": {
+                "ANDROID_SUPPORT_V4_VERSION": "27.+"
+            },
+            "cordova-plugin-platform-replace": {},
+            "cordova-plugin-advanced-http": {},
+            "cordova-plugin-geolocation": {
+                "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+            },
+            "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+                "OKHTTP_VERSION": "3.+",
+                "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes"
+            },
+            "cordova-plugin-streaming-media": {},
+            "cordova-plugin-googleplus": {
+                "REVERSED_CLIENT_ID": "com.googleusercontent.apps.464424932688-vj64rahi59k8utnfo8vo1iin3ikiigca",
+                "PLAY_SERVICES_VERSION": "11.8.0"
+            },
+            "twitter-connect-plugin": {
+                "FABRIC_KEY": "e7c73cdac291aa3d2b3032307f7a0f0ce8437b85",
+                "TWITTER_KEY": "98QVbHIg3cW2xnUXHrIAx6D2t",
+                "TWITTER_SECRET": "QWpbmTelM1FrMqkmwGvQxwfumD0waCFFbdahCBpSIi5uEATVu6"
+            }
+        },
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "config": {
+        "ionic_copy": "./scripts/copy-mobiscroll-css.js"
+    }
+}

@@ -1,0 +1,65 @@
+<!-- Themes Expandable Full image with CTA -->
+<ion-content class="bg-main-menu">
+    <!--  <ion-grid no-padding *ngIf="data != null">
+        <ion-row>
+            <ion-col col-12 no-padding no-margin>
+                <ion-list>
+                    <ul no-margin no-padding class="collapsible">
+                        <li margin *ngFor="let group of data.items;">
+                           
+                            <div class="collapsible-header">
+                                <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
+                                    <h2 item-title float-left>{{group.title}}</h2>
+                                    <button ion-button float-right button-clear-outline outline round (click)="toggleGroup(group)">
+                                        {{group.button}}
+                                  </button>
+                                </ion-item>
+                            </div>
+                          
+                            <div class="item-accordion" [ngClass]="{'active': isGroupShown(group) }" [hidden]="!isGroupShown(group)">
+                                <ion-item full default-button no-lines *ngFor="let item of group.items;" (click)="onEvent('onItemClick', item, $event)">
+                                    <h2 padding-left subitem-title>{{item}}</h2>
+                                    <ion-icon item-end white icon-small>
+                                        <i class="icon icon-chevron-right"></i>
+                                    </ion-icon>
+                                </ion-item>
+                            </div>
+                          
+                        </li>
+                    </ul>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid> -->
+    <ion-grid no-padding class="row-footer">
+            <ion-row>
+                    <ion-col col-12 no-padding no-margin>
+                        <ion-list>
+                            <ul no-margin no-padding class="collapsible">
+                                <li margin *ngFor="let group of data.items;">
+                                   
+                                    <div class="collapsible-header">
+                                        <ion-item no-margin padding no-lines background-size [ngStyle]="{'background-image': 'url(' + group.backgroundImage + ')'}">
+                                            <h2 item-title float-left>{{group.title}}</h2>
+                                            <button ion-button float-right button-clear-outline outline round (click)="toggleGroup(group)">
+                                                {{group.button}}
+                                          </button>
+                                        </ion-item>
+                                    </div>
+                                  
+                                    <div class="item-accordion" [ngClass]="{'active': isGroupShown(group) }" [hidden]="!isGroupShown(group)">
+                                        <ion-item full default-button no-lines *ngFor="let item of group.items;" (click)="onEvent('onItemClick', item, $event)">
+                                            <h2 padding-left subitem-title>{{item}}</h2>
+                                            <ion-icon item-end white icon-small>
+                                                <i class="icon icon-chevron-right"></i>
+                                            </ion-icon>
+                                        </ion-item>
+                                    </div>
+                                  
+                                </li>
+                            </ul>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+    </ion-grid>
+</ion-content>

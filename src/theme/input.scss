@@ -1,0 +1,16 @@
+.my-custom-select {
+  max-width: 100% !important;
+  font-size: 16px;
+  border-bottom: 1px solid theme-colors('mainColors', 'light-grey') !important;
+  color: theme-colors('mainColors', 'secondary-first') !important;
+  padding-left: 0 !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+}
+
+ion-item {
+  ion-select {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}

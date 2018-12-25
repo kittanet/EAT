@@ -1,0 +1,93 @@
+ion-alert {
+  .alert-head {
+    background: theme-colors('mainColors', 'alert-content') !important;
+    //padding: 20px 24px 15px 24px !important;
+  }
+
+  .alert-title {
+    text-align: center;
+    font-size: font-size-text('txt16') !important;
+    color: theme-colors('textColors', 'dark') !important;
+    background: theme-colors('mainColors', 'alert-content') !important;
+  }
+
+  .alert-message {
+    text-align: center;
+    //overflow-y: scroll;
+    //max-height: 40px !important;
+    //padding: 15px !important;
+    font-size: font-size-text('txt16') !important;
+    color: theme-colors('textColors', 'dark') !important;
+    background: theme-colors('mainColors', 'alert-content') !important;
+  }
+
+    .button-inner {
+      font-size: font-size-text('txt16') !important;
+      color: theme-colors('textColors', 'dark') !important;
+    }
+
+    .alert-input-group {
+      //padding: 0 24px 10px 24px !important;
+    }
+
+    .alert-input {
+      //border-bottom: 1px solid theme-colors('mainColors', 'primary') !important;
+    }
+
+    
+    .alert-wrapper {
+      text-align: center;
+      font-size: font-size-text('txt16') !important;
+      color: theme-colors('textColors', 'dark') !important;
+      background: theme-colors('mainColors', 'content') !important;
+    }
+
+  &.alert-menu {
+    .alert-message {
+      div.frist {
+        width: 100%;
+        height: 60px;
+        display: table;
+        font-size: font-size-text('h3') !important;
+        border-bottom: 0.7px solid theme-colors('mainColors', 'border-menu') !important;
+        div {
+            display: table-cell;
+            vertical-align: middle;
+            img {
+              width: 30px;
+              padding: 0 !important;
+              margin: 0 !important;
+            }
+            span {
+              font-size: font-size-text('h3') !important;
+              padding-left: 5px !important;
+            }
+        }   
+      }
+
+      div.last {
+        //background: #ff0000;
+        width: 100%;
+        height: 60px;
+        display: table;
+        font-size: font-size-text('h3') !important;
+        //border-bottom: 0.7px solid theme-colors('mainColors', 'border-menu') !important;
+        div {
+            display: table-cell;
+            vertical-align: middle;
+            img {
+              width: 30px;
+              padding: 0 !important;
+              margin: 0 !important;
+              vertical-align: middle;
+            }
+            span {
+              font-size: font-size-text('h3') !important;
+              padding-left: 5px !important;
+            }
+        }   
+      }
+
+    }
+  }
+}

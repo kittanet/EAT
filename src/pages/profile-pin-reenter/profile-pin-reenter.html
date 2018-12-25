@@ -1,0 +1,85 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons right>
+        <button ion-button (click)="goHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons left>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>ข้อมูลสมาชิก</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class="bg-gradient-gray">
+    <div default-background>
+      <div class="ionic-descript" text-center>
+          <h3>ระบุรหัส PIN อีกครั้ง</h3>
+        <div text-center margin-vertical>
+          <ion-icon [name]="click1"></ion-icon>
+          <ion-icon [name]="click2"></ion-icon>
+          <ion-icon [name]="click3"></ion-icon>
+          <ion-icon [name]="click4"></ion-icon>
+          <ion-icon [name]="click5"></ion-icon>
+          <ion-icon [name]="click6"></ion-icon>
+        </div>
+        <h6 (click)="goPinEnter()">ลืมรหัส PIN?</h6>
+        <ion-grid text-center>
+          <ion-row>
+            <ion-col col-10 offset-1 text-center>
+              <ion-grid text-center no-margin no-padding>
+
+                <ion-row>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('1')">1</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('2')">2</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('3')">3</button>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('4')">4</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('5')">5</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('6')">6</button>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('7')">7</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('8')">8</button>
+                  </ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('9')">9</button>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4> <button ion-button round outline large button-circle-del (click)="delPin()"><ion-icon name="backspace"></ion-icon></button></ion-col>
+                  <ion-col col-4>
+                    <button ion-button round outline large button-circle (click)="addPin('0')">0</button>
+                  </ion-col>
+                  <ion-col col-4> <button ion-button round outline large button-circle-del (click)="clearPin()"><ion-icon name="refresh"></ion-icon></button></ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </div>
+    </div>
+  </ion-content>
+  <!-- <ion-footer no-border text-center>
+    <button ion-button clear full>Cancel</button>
+  </ion-footer> -->

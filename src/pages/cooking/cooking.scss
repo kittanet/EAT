@@ -1,0 +1,38 @@
+page-cooking {
+  /* ion-header */
+   .toolbar {
+       .toolbar-background {
+           background-color: transparent;
+      }
+      /* ion-title */
+       .toolbar-title {
+           text-transform: uppercase;
+           font-size: 14px;
+           font-weight: bold;
+           color: theme-colors('textColors', 'dark');
+      }
+  }
+  /* ion-button */
+   [ion-button] {
+       color: theme-colors('textColors', 'dark') !important;
+       font-size: icon-size('icon-menu') !important;
+  }
+   .ion-cooking-bg-image {
+       background-size: contain;
+       background-repeat: no-repeat;
+       background-position: top;
+  }
+  img.img-cooking-opacity0 {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  ion-row.rowCooking {
+    width: 100%;
+    ion-col {
+     min-height: 100px;
+    }
+  }
+  
+
+}

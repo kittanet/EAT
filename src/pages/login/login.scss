@@ -1,0 +1,15 @@
+page-login {
+    @media (min-width: 320px) {
+        .bgLogin {
+            //background-image: url('../assets/images/bg/bgRegister.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            background-color: aquamarine;
+        }
+
+        .bgScreen {
+            background-size: cover;
+            background-repeat: repeat;
+          }
+    }
+}

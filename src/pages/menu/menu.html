@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button (click)="goHome()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon name="person"></ion-icon>
+        <span span-menu>{{uname}}</span>
+      </button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-navbar>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12>
+        <ion-slides *ngIf="headers && headers.length" pager="true" autoplay="5000" loop="true" speed="500">
+          <ion-slide *ngFor="let header of headers" [ngStyle]="{'background-image': 'url(' + header.img1 + ')'}">
+            <img class="img-footer-slides" [src]="header.img1" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content class="menu-background">
+  <ion-grid no-margin no-padding>
+    <ion-row class="rowMenu">
+      <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 *ngFor="let item of items" (click)="openPage(item)" text-center [ngStyle]="{'background-color': item.bgColor }">
+        <div><img class="img-menu" [src]="item.imgmenu" /></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-slides *ngIf="banners && banners.length" pager="true" autoplay="5000" loop="true" speed="500">
+    <ion-slide *ngFor="let banner of banners" [ngStyle]="{'background-image': 'url(' + banner.img1 + ')'}">
+      <img class="img-footer-slides" [src]="banner.img1" />
+    </ion-slide>
+  </ion-slides>
+</ion-footer>

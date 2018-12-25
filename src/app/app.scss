@@ -1,0 +1,155 @@
+// Settings Style Main Meni
+[header-background-image] {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    @include darkening-blend-mode;
+    border-bottom: 1px solid theme-colors('mainColors', 'accent-other') !important;
+    img {
+      padding-top: 30px;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      z-index: 9;
+      max-width: 150px;
+    }
+
+    [item-title] {
+      color: theme-colors('textColors', 'accent-first') !important;
+      position: relative;
+      z-index: 9;
+    }
+  }
+  // Settings Main  Menu
+
+  [main-menu] {
+    @include darkening-blend-mode;
+    button {
+      @include gradient-accent ($color-1, $color-2);
+      padding-left: 30px;
+      color: theme-colors('textColors', 'accent-first') !important;
+      border-bottom: 1px solid theme-colors('mainColors', 'accent-other') !important;
+    }
+
+    .item-title {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .item-inner {
+      margin-left: 0 !important;
+    }
+
+    [icon-small] {
+      margin-top: 10px !important;
+    }
+  }
+  // Settings Submenu
+
+  [submenu] {
+    ion-label {
+      padding-left: 30px !important;
+    }
+  }
+
+  // icon
+  .ion-ios-test0Icon-outline,
+  .ion-ios-test0Icon,
+  .ion-md-test0Icon,
+  .ion-md-test0Icon-outline {
+      content: url('../assets/images/bg/iconScore.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test1Icon-outline,
+  .ion-ios-test1Icon,
+  .ion-md-test1Icon,
+  .ion-md-test1Icon-outline {
+      content: url('../assets/images/bg/iconScore.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test2Icon-outline,
+  .ion-ios-test2Icon,
+  .ion-md-test2Icon,
+  .ion-md-test2Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test3Icon-outline,
+  .ion-ios-test3Icon,
+  .ion-md-test3Icon,
+  .ion-md-test3Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test4Icon-outline,
+  .ion-ios-test4Icon,
+  .ion-md-test4Icon,
+  .ion-md-test4Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test5Icon-outline,
+  .ion-ios-test5Icon,
+  .ion-md-test5Icon,
+  .ion-md-test5Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test6Icon-outline,
+  .ion-ios-test6Icon,
+  .ion-md-test6Icon,
+  .ion-md-test6Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test7Icon-outline,
+  .ion-ios-test7Icon,
+  .ion-md-test7Icon,
+  .ion-md-test7Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test8Icon-outline,
+  .ion-ios-test8Icon,
+  .ion-md-test8Icon,
+  .ion-md-test8Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test9Icon-outline,
+  .ion-ios-test9Icon,
+  .ion-md-test9Icon,
+  .ion-md-test9Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+  .ion-ios-test10Icon-outline,
+  .ion-ios-test10Icon,
+  .ion-md-test10Icon,
+  .ion-md-test10Icon-outline {
+      content: url('../assets/images/bg/iconQrCode.png');
+      display: inline-block;
+      height: 30px;
+  }
+
+

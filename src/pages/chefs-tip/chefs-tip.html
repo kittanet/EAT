@@ -1,0 +1,60 @@
+<ion-header no-border transparent>
+    <ion-navbar>
+        <ion-buttons right (click)="openMyModal()">
+            <button ion-button>
+                <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons left>
+            <button ion-button (click)="goBack()">
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-grid no-padding class="animated">
+        <ion-row class="row-ion-header">
+            <ion-col col-9 no-padding no-margin>
+                <span class="span-chefs-tips">{{step.video.title}}</span>
+            </ion-col>
+            <ion-col col-3 no-padding no-margin>
+                <span class="span-chefs-tips-yellow-b">CHEF'S</span><br>
+                <span class="span-chefs-tips-yellow">TIPS</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-header>
+<ion-content class="content-background">
+    <div class="div-video" (click)="startVideo()"></div>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <span class="span-tittle">IMPORTANT!!</span>
+                <p>{{step.video.detail}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="frist" id="click1" (click)="goSlideMenuPage()">
+                <div>Collections</div>
+            </div>
+            <div class="frist" (click)="goMyFavoritePage()">
+                <div>My Favorite</div>
+            </div>
+            <div class="frist" (click)="goMyHealthyChoicePage()">
+                <div>My Healthy Choice</div>
+            </div>
+            <div class="frist" (click)="goShoppingListPage()">
+                <div>Shopping List</div>
+            </div>
+            <div class="last" id="click5">
+                <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="assets/images/th.png"><span>Thai</span>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,25 @@
+page-chefs-tip {
+    /* ion-header */
+     .toolbar {
+         .toolbar-background {
+             background-color: transparent;
+        }
+        /* ion-title */
+         .toolbar-title {
+             text-transform: uppercase;
+             font-size: 14px;
+             font-weight: bold;
+             color: theme-colors('textColors', 'dark');
+        }
+    }
+    /* ion-button */
+     [ion-button] {
+         color: theme-colors('textColors', 'dark') !important;
+         font-size: icon-size('icon-menu') !important;
+    }
+     img.img-chefs-tips {
+         width: 100%;
+         padding-right: 10px !important;
+    }
+}
+ 

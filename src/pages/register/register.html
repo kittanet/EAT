@@ -1,0 +1,38 @@
+<ion-header no-border transparent>
+    <ion-navbar hideBackButtom>
+        <ion-buttons left (click)="dismiss()">
+            <button ion-button>
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Log in</ion-title>
+        <!-- <ion-buttons right (click)="openRegisterPhoneNumber()">
+            <button ion-button>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-buttons> -->
+    </ion-navbar>
+</ion-header>
+<ion-content class="ion-slide-menu-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}">
+    <div default-background>
+        <div class="ionic-descript" text-center>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1 offset-lg-3 col-lg-6
+                        offset-xl-3 col-xl-6 text-center>
+
+                        <button ion-button class="button-fb" (click)="goLogin('Facebook')">
+                            <ion-icon name="logo-facebook"></ion-icon>Sign in with Facebook
+                        </button>
+                        <button ion-button class="button-twitter" (click)="goLogin('Twitter')">
+                            <ion-icon name="logo-twitter"></ion-icon>Sign in with Twitter
+                        </button>
+                        <button ion-button class="button-google" (click)="goLogin('Google')">
+                            <ion-icon name="logo-google"></ion-icon>Sign in with Google
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>

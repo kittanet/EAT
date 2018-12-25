@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="goHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>ข้อมูลสมาชิก</ion-title>
+  </ion-navbar>
+  <!--   <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12>
+        <ion-slides *ngIf="headers && headers.length" pager="true" autoplay="5000" loop="true" speed="500">
+          <ion-slide *ngFor="let header of headers" [ngStyle]="{'background-image': 'url(' + header.img1 + ')'}">
+            <img class="img-footer-slides" [src]="header.img1" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-label stacked>ชื่อ</ion-label>
+        <ion-input type="text" class="form-control" [(ngModel)]="firstname"></ion-input>
+      </ion-col>
+      <ion-col col-6>
+        <ion-label stacked>นามสกุล</ion-label>
+        <ion-input type="text" class="form-control" [(ngModel)]="lastname"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        อาชีพ
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="radio" id="test1" name="radio-group1" [checked]="career=='1'" (change)="onChangeCareer(1)">
+          <label for="test1">พนักงานเงินเดือน</label>
+
+          <!-- <input type="checkbox" id="checkbox1" class="checkbox__input" [checked]="mediatype1" (change)="mediatype1 = !mediatype1">
+          <label for="checkbox1" class="checkbox__label">พนักงานเงินเดือน</label> -->
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="radio" id="test2" name="radio-group1" [checked]="career=='2'" (change)="onChangeCareer(2)">
+          <label for="test2">เจ้าของกิจการ</label>
+
+          <!-- <input type="checkbox" id="checkbox2" class="checkbox__input" [checked]="mediatype2" (change)="mediatype2 = !mediatype2">
+          <label for="checkbox2" class="checkbox__label">เจ้าของกิจการ </label> -->
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="border-bt">
+      <ion-col col-12>
+        รายได้ต่อเดือน
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="radio" id="test3" name="radio-group2" [checked]="income=='1'" (change)="onChangeIncome(1)">
+          <label for="test3">รายได้ต่อเดือน 20,0000 บาท ขึ้นไป</label>
+
+          <!-- <input type="checkbox" id="checkbox3" class="checkbox__input" [checked]="mediatype1" (change)="mediatype1 = !mediatype1">
+          <label for="checkbox3" class="checkbox__label">รายได้ต่อเดือน 20,0000 บาท ขึ้นไป</label> -->
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="radio" id="test4" name="radio-group2" [checked]="income=='2'" (change)="onChangeIncome(2)">
+          <label for="test4">รายได้ต่อเดือน 30,0000 บาท ขึ้นไป</label>
+
+          <!-- <input type="checkbox" id="checkbox4" class="checkbox__input" [checked]="mediatype2" (change)="mediatype2 = !mediatype2">
+          <label for="checkbox4" class="checkbox__label">รายได้ต่อเดือน 30,0000 บาท ขึ้นไป </label> -->
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-label stacked>เบอร์ติดต่อ</ion-label>
+        <ion-input type="tel" class="form-control" [(ngModel)]="tel"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        ท่านสนใจสินเชื่อ NCAP หรือไม่ ?
+      </ion-col>
+      <ion-col col-6>
+        <div>
+          <input type="radio" id="test5" name="radio-group3" [checked]="ncap=='1'" (change)="onChangeNcap(1)">
+          <label for="test5">สนใจ</label>
+
+          <!-- <input type="checkbox" id="checkbox1" class="checkbox__input" [checked]="mediatype1" (change)="mediatype1 = !mediatype1">
+          <label for="checkbox1" class="checkbox__label">สนใจ</label> -->
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div>
+          <input type="radio" id="test6" name="radio-group3" [checked]="ncap=='2'" (change)="onChangeNcap(2)">
+          <label for="test6">ไม่สนใจ</label>
+
+          <!-- <input type="checkbox" id="checkbox2" class="checkbox__input" [checked]="mediatype2" (change)="mediatype2 = !mediatype2">
+          <label for="checkbox2" class="checkbox__label">ไม่สนใจ</label> -->
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding *ngIf="ncap=='1'">
+      <ion-col col-12>
+        <div>
+          <input type="checkbox" id="checkbox1" class="checkbox__input" [checked]="loan1" (change)="loan1 = !loan1">
+          <label for="checkbox1" class="checkbox__label">สินเชื่อบุคคล </label>
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="checkbox" id="checkbox2" class="checkbox__input" [checked]="loan2" (change)="loan2 = !loan2">
+          <label for="checkbox2" class="checkbox__label">สินเชื่อนาโนไฟแนนซ์ </label>
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="checkbox" id="checkbox3" class="checkbox__input" [checked]="loan3" (change)="loan3 = !loan3">
+          <label for="checkbox3" class="checkbox__label">สินเชื่อเพื่อการพาณิชย์ </label>
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="checkbox" id="checkbox4" class="checkbox__input" [checked]="loan4" (change)="loan4 = !loan4">
+          <label for="checkbox4" class="checkbox__label">สินเชื่อแพ็คเตอริง </label>
+        </div>
+      </ion-col>
+      <ion-col col-12>
+        <div>
+          <input type="checkbox" id="checkbox5" class="checkbox__input" [checked]="loan5" (change)="loan5 = !loan5">
+          <label for="checkbox5" class="checkbox__label">สินเชื่อเช่าซื้อ </label>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button button-register round (click)="goHome()" style="width: 100%">ยกเลิก</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button button-register round style="width: 100%" (click)="nextPage()">ตกลง</button>
+      </ion-col>
+      <!-- <ion-col col-6>
+          <button ion-button button-register round style="width: 100%">เปลี่ยนแปลงข้อมูล</button>
+        </ion-col> -->
+    </ion-row>
+  </ion-grid>
+</ion-content>

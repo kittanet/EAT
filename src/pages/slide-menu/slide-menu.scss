@@ -1,0 +1,229 @@
+page-slide-menu {
+    /* ion-header */
+     .toolbar {
+         .toolbar-background {
+             background-color: transparent;
+        }
+        /* ion-title */
+         .toolbar-title {
+             text-transform: uppercase;
+             font-size: 14px;
+             font-weight: bold;
+             color: theme-colors('textColors', 'accent-first');
+        }
+    }
+     .ion-slide-menu-bg-image {
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+    }
+
+     .button-menu, .button-menu :active {
+         color: theme-colors('textColors', 'accent-first') !important;
+         padding-right: 10px !important;
+         margin: 0px !important;
+         background: transparent;
+         border: none;
+         ion-icon {
+             padding: 0px !important;
+             margin: 0px !important;
+             font-size: font-size-text('txt-icon') !important;
+        }
+    }
+     .collection {
+         display: table;
+         position: fixed;
+         bottom: 0px;
+         width:100%;
+         background-color: rgb(0,0,0);
+         background-color: rgba(0,0,0,0.5);
+         .collection-collapse {
+             display: table-cell;
+             vertical-align: middle;
+             height: 100px;
+        }
+         .collection-expand {
+             display: table-cell;
+             vertical-align: middle;
+             height: 400px;
+        }
+    }
+     .containerx div.desk, .containerx div.mob{
+         width: 100%;
+         background-color: rgb(0,0,0);
+         background-color: rgba(0,0,0,0.5);
+    }
+     div ul li a {
+         color: #fff;
+         text-decoration: none;
+    }
+     div.desk {
+         display: none;
+    }
+     div.mob, .hamburger-btn {
+         //display: block;
+         //height: 80px;
+         width: 100%;
+         display: table;
+         .ionic-descript1 {
+             width: 20%;
+             display: table-cell;
+             vertical-align: middle;
+             text-align: center;
+             //padding-left: 10px;
+             border-right: 1px solid theme-colors('textColors', 'accent-first') !important;
+             div.div-top {
+                 width: 20%;
+                 position: absolute;
+                 top: 0px;
+                 //background-color: #bafffd;
+                 height: 80px;
+            }
+             div.div-bottom {
+                 width: 20%;
+                 position: absolute;
+                 bottom: 0px;
+                 height: 80px;
+                 //background-color: #11bdff;
+            }
+             div.div-middle {
+                 position: absolute;
+                 top: 50%;
+            }
+        }
+         .ionic-descript2 {
+             width: 80%;
+             display: table-cell;
+             vertical-align: middle;
+             div.y-tittle {
+                 padding: 10px;
+                 display: table-cell;
+                 vertical-align: middle;
+                 height: 80px;
+            }
+             div.y-scroll {
+                 height: 150px !important;
+                 overflow-y: scroll;
+                 div.y-content {
+                     font-size: 14px;
+                     line-height: 18px;
+                     color: #fff;
+                }
+            }
+        }
+    }
+     .hamburger-btn {
+         //position: relative;
+    }
+     .hamburger-btn .fa-angle-double-down , .hamburger-btn .fa-angle-double-up {
+         //position: absolute;
+         //left: 10px;
+         //right: 15px;
+         //font-size: 30px;
+         //cursor: pointer;
+         color: theme-colors('textColors', 'angle-double');
+         font-size: font-size-text('txt-angle');
+    }
+     .fa-angle-double-right, .fa-angle-double-left {
+         color: theme-colors('textColors', 'angle-double');
+         font-size: font-size-text('txt-angle');
+    }
+     .mob ul{
+         // background: #f05a28;
+         display: none;
+    }
+     .mob li {
+         //text-align: center;
+         //padding: 15px;
+         text-transform: uppercase;
+         cursor: pointer;
+    }
+     .mob ul.active {
+         display: block;
+    }
+     .title-h {
+         color: #fff;
+    }
+    /* ========================================== */
+     span.span-content {
+         font-size: 14px;
+         color: #fff;
+         display: list-item;
+         list-style-type: disc;
+         list-style-position: inside;
+         padding: 10px 0px 10px 10px !important;
+         line-height: 18px;
+    }
+     span.span-content-active {
+         font-size: 14px;
+         color: theme-colors('mainColors', 'golden-tea-pot') !important;
+         display: list-item;
+         list-style-type: disc;
+         list-style-position: inside;
+         padding: 10px 0px 10px 10px !important;
+         line-height: 18px;
+    }
+
+    /* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+
+    img.img-point {
+        width: 10%;
+        position: fixed;
+        top: 47%;
+        left: 47%;
+    }
+}
+ 

@@ -1,0 +1,72 @@
+<ion-header no-border transparent>
+  <ion-navbar>
+    <ion-buttons right (click)="openMyModal()">
+      <button ion-button id="btnMenu">
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12 no-padding no-margin>
+        <img class="img-logo" src="assets/images/logo.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content class="ion-slide-menu-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <span class="span-cooking-content">Because we deeply believe our health reflect from the eating style.
+              Therefore, we go through every detail of cooking to be your healthy food choices.
+            </span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-12>
+            <div class="modal-content-choice" text-center>
+              <span class="span-tittle-menu">SELECT YOUR STYLE</span>
+              <div [ngClass]="item.select ? 'frist-select': 'frist'" *ngFor="let item of style" (click)="change(item.index)">
+                <div>{{item.name}}</div>
+              </div>
+              <div class="last">
+                <div><button ion-button class="button-mb" (click)="findStyle()">
+                    <ion-icon>
+                    </ion-icon>Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="frist" id="click1" (click)="goSlideMenuPage()">
+            <div>Collections</div>
+        </div>
+        <div class="frist" (click)="goMyFavoritePage()">
+            <div>My Favorite</div>
+        </div>
+        <div class="frist" (click)="goMyHealthyChoicePage()">
+            <div>My Healthy Choice</div>
+        </div>
+        <div class="frist" (click)="goShoppingListPage()">
+            <div>Shopping List</div>
+        </div>
+        <div class="last" id="click5">
+            <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="assets/images/th.png"><span>Thai</span>
+            </div>
+        </div>
+    </div>
+</div>

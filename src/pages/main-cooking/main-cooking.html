@@ -1,0 +1,284 @@
+<ion-header no-border transparent>
+    <ion-navbar>
+        <ion-buttons right (click)="openMyModal()">
+            <button ion-button id="btnMenu">
+                <ion-icon>
+                    <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+                </ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons left (click)="backPage()">
+            <button ion-button>
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>All Day Breakfast</ion-title>
+    </ion-navbar>
+</ion-header>
+<!-- <ion-content class="ion-content-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}"> -->
+<ion-content class="content-background">
+    <div default-background-height>
+        <div class="ionic-descript-top ion-content-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}">
+            <div class="icon-position">
+                <ion-icon (click)="presentModal()">
+                    <i [ngClass]="Like ? 'icon icon-heart icon-like': 'icon icon-heart icon-unlike icon-position'"></i>
+                </ion-icon>
+            </div>
+        </div>
+        <div class="ionic-descript-bottom" text-center>
+            <div default-background>
+                <div class="ionic-descript" text-center>
+                    <ion-grid no-padding>
+                        <ion-row class="ion-row-healthy-001">
+                            <ion-col col-12 text-left>
+                                <span class="span-cooking-header">{{res.title}}</span>
+                                <span class="span-cooking">{{res.Serve}} Serve, {{res.Cooking}}, {{res.Good_for}}</span>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <ion-row class="ion-row-healthy-morning-white">
+                    <ion-col col-12 text-left>
+                        <span class="span-cooking-content">{{res.How_this_food}}</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="ion-row-healthy-morning-white">
+                    <ion-col col-12>
+                        <span class="span-tittle-yellow">Ingredients</span>
+                        <!-- <span class="span-tittle-black">Crab Cake</span> -->
+                        <div style="margin-top: 5px !important">
+                            <div *ngFor="let item of res.Ingredients">
+                                <span class="span-cooking-content" *ngIf="item.index.length == 1">{{item.index[0].subindex.Unit}}
+                                    {{item.index[0].subindex.Item}}</span>
+                                <div *ngIf="item.index.length != 1">
+                                    <ion-item no-lines no-margin no-padding>
+                                        <ion-select class="my-custom-select" [selectOptions]="selectOptions" [(ngModel)]="map[item.key]" (ionChange)="change(item.key)">
+                                            <ion-option *ngFor="let item2 of item.index" [value]="item2.subindex.Item">{{item2.subindex.Unit}}
+                                                {{item2.subindex.Item}}</ion-option>
+                                        </ion-select>
+                                    </ion-item>
+                                    <!-- <ion-icon name="arrow-dropdown"></ion-icon> -->
+                                </div>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button class="button-cooking" (click)="goCookingPage()">
+                            <ion-icon><img class="img-bt" src="assets/images/bt001.png" />
+                            </ion-icon> Cooking<br>Now
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button class="button-cooking">
+                            <ion-icon><img class="img-bt" src="assets/images/bt002.png" />
+                            </ion-icon><span>Add to <br>Shopping</span>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row class="ion-row-nutrition-facts">
+            <ion-col col-12>
+                <table class="nutrition-facts">
+                    <tr>
+                        <td text-center class="nutrition-facts-tittle">Nutrition Facts </td>
+                    </tr>
+                    <tr style="border-bottom: 20px solid #000000;">
+                        <td>Serving Size {{size}} g
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td style="font-size: 16px; font-weight: bold;"> <span class="span-tittle-black">Amount Per
+                                Serving</span>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 5px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Calories</td>
+                                    <td width="15%">{{calories}} </td>
+                                    <td width="35%">Calories from Fat</td>
+                                    <td width="15%">{{calories_form_fat}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td style="font-size: 16px; font-weight: bold;" text-right> <span class="span-tittle-black">%Daily
+                                Value*</span>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Total Fat {{total_fat}} g</td>
+                                    <td width="30%" text-right>1%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%" style="padding-left:10px !important">Saturated Fat
+                                        {{saturated_fat}} g</td>
+                                    <td width="30%" text-right>{{(saturated_fat/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td style="padding-left:10px !important">Trans Fat {{trans_fat}} g</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Cholesterol {{cholesterol}} mg</td>
+                                    <td width="30%" text-right>{{(cholesterol/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Sodium {{sodium*1000}} mg</td>
+                                    <td width="30%" text-right>{{(sodium/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Total Carbohydrate {{total_carbohydarte}} g</td>
+                                    <td width="30%" text-right>{{(total_carbohydarte/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%" style="padding-left:10px !important">Dietary Fiber
+                                        {{dietary_fiber}} </td>
+                                    <td width="30%" text-right>{{(dietary_fiber/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td style="padding-left:10px !important">Sugars {{sugar}} g </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 20px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td>Protein {{protein}} g</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Vitamin D</td>
+                                    <td width="15%">{{(vitamin_D/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%
+                                    </td>
+                                    <td width="35%">Potassium</td>
+                                    <td width="15%">{{(potassium/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Calcium</td>
+                                    <td width="15%">{{(calcium/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%
+                                    </td>
+                                    <td width="35%">Iron</td>
+                                    <td width="15%">{{(potassium/size*100).toLocaleString('en-US',{maximumFractionDigits:0})}}%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        *Percent Daily Values are based on a 2,000 calorie diet. Your daily values
+                                        may
+                                        be higher or lower depending on your calorie needs.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px !important;">
+                                        <table class="table-end">
+                                            <tr>
+                                                <td>NutritionData.com</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="frist" id="click1" (click)="goSlideMenuPage()">
+            <div>Collections</div>
+        </div>
+        <div class="frist" (click)="goMyFavoritePage()">
+            <div>My Favorite</div>
+        </div>
+        <div class="frist" (click)="goMyHealthyChoicePage()">
+            <div>My Healthy Choice</div>
+        </div>
+        <div class="frist" (click)="goShoppingListPage()">
+            <div>Shopping List</div>
+        </div>
+        <div class="last" id="click5">
+            <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="assets/images/th.png"><span>Thai</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+register-layout-1 {
+  .toolbar {
+    .toolbar-background {
+      @include gradient-accent ($color-2, $color-2);
+    }
+    .toolbar-title {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      color: theme-colors('textColors', 'accent-first');
+    }
+  }
+  
+  [ion-button] {
+    color: theme-colors('textColors', 'accent-first') !important;
+    font-size: icon-size('icon-menu') !important;
+  }
+  
+  .login-logo {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .txt14 {
+    margin-top: 10px;
+  }
+
+  button.button-fb {
+    width: 100%;
+    background: theme-colors('mainColors', 'facebook-blue') !important;
+    color: theme-colors('blendModes', 'primary') !important;
+    font-size: font-size-text('h4') !important;
+    padding: 25px 25px !important;
+    font-weight: bold !important;
+    border: none;
+    ion-icon {
+      i.icon-facebook {
+        color: #ffffff;
+        padding-right: 5px;
+      }
+    }
+  }
+  
+  button.button-mb {
+    width: 100%;
+    background: theme-colors('mainColors', 'sky-blue') !important;
+    color: theme-colors('blendModes', 'primary') !important;
+    font-size: font-size-text('h4') !important;
+    padding: 25px 25px !important;
+    font-weight: bold !important;
+    border: none;
+    ion-icon {
+      i.icon-cellphone-iphone {
+        color: #ffffff;
+        padding-right: 5px;
+      }
+    }
+  }
+  
+  button.button-gender {
+    width: 100px;
+    background: theme-colors('mainColors', 'light-grey') !important;
+    color: theme-colors('textColors', 'ligh2-grey') !important;
+    font-size: font-size-text('h2') !important;
+    padding: 25px 25px !important;
+    font-weight: bold !important;
+    border: none;
+    ion-icon {
+      i.icon-cellphone-iphone {
+        color: #ffffff;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+

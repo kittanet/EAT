@@ -1,0 +1,281 @@
+<ion-header no-border transparent>
+    <ion-navbar>
+        <ion-buttons right (click)="openMyModal()">
+            <button ion-button id="btnMenu">
+                <ion-icon>
+                    <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+                </ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons left (click)="backPage()">
+            <button ion-button>
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>All Day Breakfast</ion-title>
+    </ion-navbar>
+</ion-header>
+<!-- <ion-content class="ion-content-bg-image" [ngStyle]="{'background-image': 'url(' + img1 + ')'}"> -->
+<ion-content class="content-background">
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12>
+                <img class="img-healthy-morning" src="assets/images/img007.jpg" />
+                <ion-icon>
+                    <i class="icon icon-heart icon-like icon-position"></i>
+                </ion-icon>
+                <!-- <ion-icon>
+                    <i class="icon icon-heart icon-like icon-position"></i>
+                </ion-icon> -->
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-row-healthy-morning">
+            <ion-col col-12 text-left>
+
+
+                <span class="span-cooking-header">Quioa-Crab Cake with Tartar Sauce</span>
+                <span class="span-cooking">1 Serve, 30 mins</span>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-12>
+                <ion-row class="ion-row-healthy-morning-white">
+                    <ion-col col-12 text-left>
+                        <span class="span-cooking-content">Quinoa is one of super food for everyone want to control
+                            their weight. Now, make it more
+                            fancy with this recipe!</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="ion-row-healthy-morning-white">
+                    <ion-col col-12>
+                        <span class="span-tittle-yellow">Ingredients</span>
+                        <span class="span-tittle-black">Crab Cake</span>
+                        <div style="margin-top: 5px !important">
+                            <span class="span-cooking-content">1 cup crabmeat, picked free of shells </span>
+                            <span class="span-cooking-content">1/3 cup breadcrumb </span>
+                            <span class="span-cooking-content">1/3 cup quinoa, cooked </span>
+                            <span class="span-cooking-content">3 green onions, finely chopped </span>
+                            <span class="span-cooking-content">1/2 cup bell pepper, finely chopped </span>
+                            <span class="span-cooking-content">1/4 cup mayonnaise</span>
+                        </div>
+                    </ion-col>
+
+                    <ion-col col-6>
+                        <button ion-button class="button-cooking" (click)="goCookingPage()">
+                            <ion-icon><img class="img-bt" src="assets/images/bt001.png" />
+                            </ion-icon> Cooking<br>Now
+                        </button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button ion-button class="button-cooking">
+                            <ion-icon><img class="img-bt" src="assets/images/bt002.png" />
+                            </ion-icon><span>Add to <br>Shopping</span>
+                        </button>
+                    </ion-col>
+
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row class="ion-row-nutrition-facts">
+            <ion-col col-12>
+                <table class="nutrition-facts">
+                    <tr>
+                        <td text-center class="nutrition-facts-tittle">Nutrition Facts </td>
+                    </tr>
+                    <tr style="border-bottom: 20px solid #000000;">
+                        <td>Serving Size 172 g
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td style="font-size: 16px; font-weight: bold;"> <span class="span-tittle-black">Amount Per
+                                Serving</span>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 5px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Calories</td>
+                                    <td width="15%">200 </td>
+                                    <td width="35%">Calories from Fat</td>
+                                    <td width="15%">8</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td style="font-size: 16px; font-weight: bold;" text-right> <span class="span-tittle-black">%Daily
+                                Value*</span>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Total Fat 1 g</td>
+                                    <td width="30%" text-right>1%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%" style="padding-left:10px !important">Saturated Fat 0 g</td>
+                                    <td width="30%" text-right>1%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td style="padding-left:10px !important">Trans Fat </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Cholesterol 0 mg</td>
+                                    <td width="30%" text-right>0%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Sodium 7 mg</td>
+                                    <td width="30%" text-right>0%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%">Total Carbohydrate 36 g</td>
+                                    <td width="30%" text-right>12%</td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="70%" style="padding-left:10px !important">Dietary Fiber 119 </td>
+                                    <td width="30%" text-right>45%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td style="padding-left:10px !important">Sugars 6 g </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 20px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td>Protein 13 g</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Vitamin A</td>
+                                    <td width="15%">1% </td>
+                                    <td width="35%">Vitamin A</td>
+                                    <td width="15%">1%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+                        <td>
+                            <table class="table-on-padding">
+                                <tr>
+                                    <td width="35%">Calcium</td>
+                                    <td width="15%">4% </td>
+                                    <td width="35%">Iron</td>
+                                    <td width="15%">24%</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000000;">
+
+
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        *Percent Daily Values are based on a 2,000 calorie diet. Your daily values may
+                                        be higher or lower depending on your calorie needs.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px !important;">
+                                        <table class="table-end">
+                                            <tr>
+                                                <td>NutritionData.com</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="frist" id="click1" (click)="goSlideMenuPage()">
+            <div>Collections</div>
+        </div>
+        <div class="frist" (click)="goMyFavoritePage()">
+            <div>My Favorite</div>
+        </div>
+        <div class="frist" (click)="goMyHealthyChoicePage()">
+            <div>My Healthy Choice</div>
+        </div>
+        <div class="frist" (click)="goShoppingListPage()">
+            <div>Shopping List</div>
+        </div>
+        <div class="last" id="click5">
+            <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="assets/images/th.png"><span>Thai</span>
+            </div>
+        </div>
+    </div>
+</div>

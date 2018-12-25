@@ -1,0 +1,9 @@
+<div class="scroll-tabs" green-background>
+  <ion-scroll #scrollTab class="scroll-container" scrollX="true">
+    <div class="section" *ngFor="let tab of tabs">
+      <button ion-button small clear [ngStyle]="{'background-image': 'url(' + tab.imgbg + ')'}" class="tab9-button" [class.three]="tabs.length<=3"
+        [class.selected]="tab.selected" (click)="tabChange(tab)">
+      </button>
+    </div>
+  </ion-scroll>
+</div>

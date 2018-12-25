@@ -1,0 +1,44 @@
+.scroll-tabs {
+  height: 70px !important;
+  .scroll-container {
+      height: 70px;
+      overflow: scroll;
+      white-space: nowrap;
+      //border-bottom: 2px solid color($colors, light);
+      .section {
+          min-width: 15vw;
+          display: inline-block;
+          white-space: nowrap;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          padding-bottom: 0;
+          .tab9-button {
+              //background-color: aquamarine;
+              border-radius: 0;
+              height: 15vw;
+              min-width: 15vw;
+             /*padding-bottom: 3px;
+              padding-left: 1px;
+              padding-right: 1px;
+              margin-right: 2vw;
+              margin-left: 2vw;
+              color: color($colors, dark);
+              text-transform: none !important;
+              font-size: 9px;
+              background-size: contain;
+              */
+              //background: url(../assets/images/tabs-menu/icon001.png) center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+         }
+          .tab9-button.selected {
+              color: color($colors, primary);
+              border-bottom: 3px solid theme-colors('mainColors', 'accent') !important;
+         }
+          .tab9-button.three {
+              width: 29vw;
+         }
+     }
+ }
+}

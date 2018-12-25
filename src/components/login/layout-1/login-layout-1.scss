@@ -1,0 +1,44 @@
+/*  #Style Login + logo
+================================================*/
+login-layout-1 {
+  i.i-login {
+    color: black;
+  }
+  ion-label {
+    font-size: 14px;
+  }
+
+  .toolbar {
+    .toolbar-background {
+      @include gradient-accent ($color-5, $color-5);
+    }
+  }
+
+  ion-row.row-login {
+    ion-col {
+      height: 300px;
+    }
+  }
+
+  .login-logo { 
+    width: 60%;
+    margin-top: 10px;
+  }
+  .login-footer { width: 50%; }
+
+  button.button-fb {
+    width: 100%;
+    background: theme-colors('mainColors', 'facebook-blue') !important;
+    color: theme-colors('blendModes', 'primary') !important;
+    font-size: font-size-text('h3') !important;
+    padding: 25px 25px !important;
+    font-weight: bold !important;
+    border: none;
+    ion-icon {
+      i.icon-facebook {
+        color: #ffffff;
+        padding-right: 5px;
+      }
+    }
+  }
+}

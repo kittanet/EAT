@@ -1,0 +1,62 @@
+<ion-content class="bg-main-menu">
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12 text-right>
+                <ion-icon class="menu-color" ios="ios-menu" md="md-menu" id="menu"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <img class="img-logo" src="../../assets/images/logo.png">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="frist" id="click1">
+                <div>Collections</div>
+            </div>
+            <div class="frist" id="click2" (click)="nextPage()">
+                <div>My Favorite</div>
+            </div>
+            <div class="frist" id="click3">
+                <div>My Healthy Choice</div>
+            </div>
+            <div class="frist" id="click4">
+                <div>Shopping List</div>
+            </div>
+            <div class="last" id="click5">
+                <div><img src="assets/images/eng.png"><span>Eng</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="assets/images/th.png"><span>Thai</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="myCollection" class="containerx">
+        <div class="mob">
+            <div class="hamburger-btn">
+                <div class="ionic-descript1">
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                    <i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
+                <div class="ionic-descript2">
+                    <span class="title-h txt20b">CHEF'S TIPS</span><br>
+                    <span class="title-h txt14i">1 of 8 collections</span>
+                </div>
+            </div>
+            <ul>
+                <li (click)="scrollToSection1()">
+                    <a>1</a>
+                </li>
+                <li (click)="scrollToSection2()">
+                    <a>2</a>
+                </li>
+                <li (click)="scrollToSection3()">
+                    <a>3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="goHome()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>ข้อมูลสมาชิก</ion-title>
+  </ion-navbar>
+  <!--   <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-12>
+        <ion-slides *ngIf="headers && headers.length" pager="true" autoplay="5000" loop="true" speed="500">
+          <ion-slide *ngFor="let header of headers" [ngStyle]="{'background-image': 'url(' + header.img1 + ')'}">
+            <img class="img-footer-slides" [src]="header.img1" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col col-12 text-center>
+        <img src="assets/images/bg-screen/login.png" width="40%">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="bgWhite">
+    <ion-row>
+      <ion-col col-12>
+        <ion-label stacked>ชื่อ-นามสกุล</ion-label>
+        <span class="txt18b">{{firstname}}&nbsp;{{lastname}}</span>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-label stacked>อาชีพ</ion-label>
+        <span class="txt18b" *ngIf="career=='1'">พนักงานเงินเดือน</span>
+        <span class="txt18b" *ngIf="career=='2'">เจ้าของกิจการ</span>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-label stacked>รายได้ต่อเดือน</ion-label>
+        <span class="txt18b" *ngIf="income=='1'">รายได้ต่อเดือน 20,0000 บาท ขึ้นไป</span>
+        <span class="txt18b" *ngIf="income=='2'">รายได้ต่อเดือน 30,0000 บาท ขึ้นไป</span>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-label stacked>เบอร์ติดต่อ</ion-label>
+        <span class="txt18b">{{tel}}</span>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-label stacked>ท่านสนใจสินเชื่อ NCAP หรือไม่ ?</ion-label>
+        <span class="txt18b" *ngIf="ncap=='1'">สนใจ</span>
+        <span class="txt18b" *ngIf="ncap=='2'">ไม่สนใจ</span>
+        <span class="txt18b" *ngIf="loan1"><br>- สินเชื่อบุคคล</span>
+        <span class="txt18b" *ngIf="loan2"><br>- สินเชื่อนาโนไฟแนนซ์</span>
+        <span class="txt18b" *ngIf="loan3"><br>- สินเชื่อเพื่อการพาณิชย์</span>
+        <span class="txt18b" *ngIf="loan4"><br>- สินเชื่อแพ็คเตอริง</span>
+        <span class="txt18b" *ngIf="loan5"><br>- สินเชื่อเช่าซื้อ</span>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid padding>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button button-register round style="width: 100%" (click)="goHome()">ตกลง</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button button-register round style="width: 100%" (click)="goProfileFormPage()">เปลี่ยนแปลงข้อมูล</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
